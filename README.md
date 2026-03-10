@@ -115,7 +115,7 @@ If the plugin stops working, just restart OmniSharp. Please create an issue with
 
 Questions, bug reports, and pull requests are all welcome! Please create an issue first before you start writing code in case I'm able to provide additional context.
 
-All contributions should comply with these requirements:
+All contributions should follow these guidelines:
 
 * 80 characters line width (up to 100 is acceptable if there's no good way to break it down).
 * Implicit types (`var`) should not be used unless it's immediately apparent what type it is or when the type is not relevant for readability.
@@ -126,7 +126,7 @@ All contributions should comply with these requirements:
 
 #### AI Policy
 
-I am tentatively accepting AI-generated code as long they comply with all of the above requirements. Please clearly label any AI-generated code when you create a pull request.
+I am tentatively accepting AI-generated code **as long as it is readable** and complies with the guidelines. Please clearly label any AI-generated code when you create a pull request.
 
 This policy may be revoked at any time.
 
