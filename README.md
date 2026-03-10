@@ -120,6 +120,7 @@ All contributions should comply with these requirements:
 * 80 characters line width (up to 100 is acceptable if there's no good way to break it down).
 * Implicit types (`var`) should not be used unless it's immediately apparent what type it is or when the type is not relevant for readability.
 * Public types and methods should have xmldoc comments.
+* Default access modifiers should be omitted.
 * Paket must be used as the package manager.
 * MSBuild files are not allowed.
 
