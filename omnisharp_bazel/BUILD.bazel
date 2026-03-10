@@ -1,0 +1,23 @@
+load("@rules_dotnet//dotnet:defs.bzl", "csharp_library")
+
+csharp_library(
+    name = "omnisharp_bazel",
+    srcs = glob(["*.cs"]),
+    nullable = "enable",
+    target_frameworks = ["net10.0"],
+    visibility = ["//visibility:public"],
+    deps = [
+        "@packages.dotnet//microsoft.codeanalysis.common",
+        "@packages.dotnet//microsoft.codeanalysis.csharp",
+        "@packages.dotnet//microsoft.codeanalysis.workspaces.common",
+        "@packages.dotnet//microsoft.extensions.logging.abstractions",
+        "@packages.dotnet//microsoft.extensions.configuration.abstractions",
+        "@packages.dotnet//microsoft.extensions.configuration.binder",
+        "@packages.dotnet//newtonsoft.json",
+        "@packages.dotnet//omnisharp.abstractions",
+        "@packages.dotnet//omnisharp.roslyn",
+        "@packages.dotnet//omnisharp.roslyn.csharp",
+        "@packages.dotnet//system.composition",
+        "@packages.dotnet//system.composition.attributedmodel",
+    ]
+)

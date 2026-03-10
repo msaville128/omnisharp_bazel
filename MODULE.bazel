@@ -1,0 +1,27 @@
+"Module for Bazel integration with the OmniSharp language server"
+
+module(name = "omnisharp_bazel", version = "1.0.0")
+
+bazel_dep(name = "bazel_skylib", version = "1.9.0")
+bazel_dep(name = "rules_dotnet", version = "0.21.5")
+bazel_dep(name = "rules_shell", version = "0.6.1")
+
+# ==============================================================================
+# @dotnet_toolchains
+
+DOTNET_VERSION = "10.0.100"
+
+dotnet = use_extension("@rules_dotnet//dotnet:extensions.bzl", "dotnet")
+dotnet.toolchain(dotnet_version = DOTNET_VERSION)
+use_repo(dotnet, "dotnet_toolchains")
+
+register_toolchains("@dotnet_toolchains//:all")
+
+# ==============================================================================
+# @packages.dotnet
+
+paket = use_extension(
+    "//packages/dotnet/extension:paket.main_extension.bzl",
+    "main_extension"
+)
+use_repo(paket, **{"packages.dotnet": "paket.main"})

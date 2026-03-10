@@ -1,0 +1,5 @@
+"Repository settings"
+
+ignore_directories([
+    "**/paket-files",
+])

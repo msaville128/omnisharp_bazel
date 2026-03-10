@@ -1,0 +1,17 @@
+source https://api.nuget.org/v3/index.json
+storage: none
+
+nuget Microsoft.CodeAnalysis.Common 3.8.0
+nuget Microsoft.CodeAnalysis.CSharp 3.8.0
+nuget Microsoft.CodeAnalysis.Workspaces.Common 3.8.0
+nuget Microsoft.Extensions.Configuration 2.1.1
+nuget Microsoft.Extensions.Configuration.Abstractions 2.1.1
+nuget Microsoft.Extensions.Configuration.Binder 2.1.1
+nuget Microsoft.Extensions.Logging 2.1.1
+nuget Microsoft.Extensions.Logging.Abstractions 2.1.1
+nuget Newtonsoft.Json 13.0.4
+nuget OmniSharp.Abstractions 1.37.4
+nuget OmniSharp.Roslyn 1.37.4
+nuget OmniSharp.Roslyn.CSharp 1.37.4
+nuget System.Composition 1.0.31
+nuget System.Composition.AttributedModel 1.0.31

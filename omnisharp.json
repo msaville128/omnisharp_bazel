@@ -1,0 +1,20 @@
+{
+    "plugins": {
+        "locationPaths": [
+            "bazel-bin/omnisharp_bazel/omnisharp_bazel/net10.0/omnisharp_bazel.dll"
+        ]
+    },
+    "bazel": {
+        "enabled": true,
+        "executable": "bazelisk"
+    },
+    "msbuild": {
+        "enabled": false
+    },
+    "cake": {
+        "enabled": false
+    },
+    "script": {
+        "enabled": false
+    }
+}
