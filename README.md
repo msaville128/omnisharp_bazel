@@ -67,11 +67,13 @@ Pick one of the methods below to install the plugin, and then follow the instruc
 
 2. Run `bazel build @omnisharp_bazel//omnisharp_bazel`
 
-3. Copy the path to the dll from the output into `omnisharp.json`.
+3. Copy the path to the dll from the output and paste it into `omnisharp.json`.
 
 ### Direct download
 
-*Coming soon*
+1. Download the dll from [Releases](https://github.com/msaville128/omnisharp_bazel/releases).
+
+2. Enter the full path to the dll in `omnisharp.json`.
 
 ## IDE Integration
 
