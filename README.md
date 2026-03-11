@@ -54,9 +54,6 @@ Pick one of the methods below to install the plugin, and then follow the instruc
 
 ### Bzlmod (recommended)
 
-> [!NOTE]
-> I'm working on publishing this to Bazel Central Registry. For now, `git_override` is required.
-
 1. Add this to `MODULE.bazel`:
 
    ```python
@@ -72,10 +69,6 @@ Pick one of the methods below to install the plugin, and then follow the instruc
 
 3. Copy the path to the dll from the output into `omnisharp.json`.
 
-### NuGet / Paket
-
-*Coming soon*
-
 ### Direct download
 
 *Coming soon*
@@ -90,10 +83,6 @@ Install the official [C# extension](https://marketplace.visualstudio.com/items?i
 > **Do not install C# Dev Kit!** Uninstall or disable this extension or the OmniSharp server will not start.
 
 After you install the dll and create `omnisharp.json`, restart OmniSharp for it to take effect. Open the command palette (`Ctrl+Shift+P`) and then run `OmniSharp: Restart OmniSharp`.
-
-### VSCodium
-
-*Coming soon*
 
 ## How it works
 
