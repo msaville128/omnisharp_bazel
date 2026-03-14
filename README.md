@@ -86,6 +86,25 @@ Install the official [C# extension](https://marketplace.visualstudio.com/items?i
 
 After you install the dll and create `omnisharp.json`, restart OmniSharp for it to take effect. Open the command palette (`Ctrl+Shift+P`) and then run `OmniSharp: Restart OmniSharp`.
 
+## Motivation
+
+I love C# and I love Bazel.
+
+But IDE support for C# with Bazel didn't exist. Until now, developers can either:
+
+1. Maintain C# project and solution files in parallel with BUILD files (*which drift over time*)
+2. Use Gazelle or other tools to generate Bazel targets from MSBuild files (*which makes Bazel second class*)
+
+I dislike mixing different build systems in a repo. In my view, if you choose Bazel then you should only need BUILD files. There shouldn't be any reason to use MSBuild at all!
+
+There are a few Roslyn-powered C# language servers out there:
+
+* C# Dev Kit is closed-source
+* DotRush doesn't have a way to extend it (that I'm aware of)
+* OmniSharp has a plugin system based on MEF2 
+
+OmniSharp was the de-facto language server for VS Code before C# Dev Kit and its extensibility makes it the preferred choice for adding Bazel integration.
+
 ## How it works
 
 This plugin runs a Bazel query on each C# file to determine which target "owns" it. A virtual project is created for each target. To inspect these queries, look at OmniSharp logs for messages from `OmniSharp.Bazel.BazelShell`.
@@ -117,28 +136,7 @@ All contributions should follow these guidelines:
 
 #### AI Policy
 
-I am tentatively accepting AI-generated code **as long as it is readable** and complies with the guidelines. Please clearly label any AI-generated code when you create a pull request.
-
-This policy may be revoked at any time.
-
-## Motivation
-
-I love C# and I love Bazel.
-
-But IDE support for C# with Bazel didn't exist. Until now, developers can either:
-
-1. Maintain C# project and solution files in parallel (*which drift over time*)
-2. Use Gazelle to generate Bazel targets from MSBuild files (*which makes Bazel second class*)
-
-I dislike mixing different build systems in a repo. In my view, if you choose Bazel then you should only need BUILD files. There shouldn't be any reason to use MSBuild at all!
-
-There are a few Roslyn-powered C# language servers out there:
-
-* C# Dev Kit is closed-source
-* DotRush doesn't have a way to extend it (that I'm aware of)
-* OmniSharp has a plugin system based on MEF2 
-
-OmniSharp was the de-facto language server for VS Code before C# Dev Kit and its extensibility makes it the preferred choice for adding Bazel integration.
+I am tentatively accepting AI-assisted code **as long as it is readable** and complies with the guidelines.
 
 ---
 
