@@ -79,12 +79,14 @@ Pick one of the methods below to install the plugin, and then follow the instruc
 
 ### Visual Studio Code
 
-Install the official [C# extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp). OmniSharp comes bundled with this extension.
+1. Install the official [C# extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp). OmniSharp comes bundled with this extension.
 
 > [!WARNING]
 > **Do not install C# Dev Kit!** Uninstall or disable this extension or the OmniSharp server will not start.
 
-After you install the dll and create `omnisharp.json`, restart OmniSharp for it to take effect. Open the command palette (`Ctrl+Shift+P`) and then run `OmniSharp: Restart OmniSharp`.
+2. Set the `dotnet.server.useOmnisharp` setting to true.
+
+3. After you install the dll and create `omnisharp.json`, restart OmniSharp for it to take effect. To do this, open the command palette (`Ctrl+Shift+P`) and then run `OmniSharp: Restart OmniSharp`.
 
 ## Motivation
 
@@ -124,19 +126,6 @@ If the plugin stops working, just restart OmniSharp. Please create an issue with
 ## Contributing
 
 Questions, bug reports, and pull requests are all welcome! Please create an issue first before you start writing code in case I'm able to provide additional context.
-
-All contributions should follow these guidelines:
-
-* 80 characters line width (up to 100 is acceptable if there's no good way to break it down).
-* Implicit types (`var`) should not be used unless it's immediately apparent what type it is or when the type is not relevant for readability.
-* Public types and methods should have xmldoc comments.
-* Default access modifiers should be omitted.
-* Paket must be used as the package manager.
-* MSBuild files are not allowed.
-
-#### AI Policy
-
-I am tentatively accepting AI-assisted code **as long as it is readable** and complies with the guidelines.
 
 ---
 
